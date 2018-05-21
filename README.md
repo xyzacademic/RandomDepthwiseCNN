@@ -1,8 +1,8 @@
 # RandomDepthwiseCNN
 
-These code is used to reproduce the results post on paper RandomDepthwiseCNN.
+These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
 
-1. Reproduce the results of cifar10
+1. How to reproduce the results of cifar10 part.
 
 	a. Enter folder "cifar10"
 	
