@@ -3,6 +3,7 @@
 These code is used to reproduce the results post on paper RandomDepthwiseCNN.
 
 1. Reproduce the results of cifar10
+
 	a. Enter folder "cifar10"
 	b. Run "sh reproduce.sh"
 
