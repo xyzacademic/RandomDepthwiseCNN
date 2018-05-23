@@ -20,6 +20,9 @@ These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
 
 		python sgd_1m.py # Run MultiPerceptron on new features
 
+	You will get 78.39% accuracy on testing dataset in the end.
+
+
 
 2. How to reproduce the results of stl10 part.
 
