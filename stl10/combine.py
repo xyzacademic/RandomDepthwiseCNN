@@ -8,7 +8,7 @@ test_list = []
 for j in range(1,11):
     print(j)
     os.chdir('features%s'%str(j))
-    for i in range(10):
+    for i in range(4):
         train_ = np.load('train_data_%d.npy'%i)
         train_list.append(train_)
         test_ = np.load('test_data_%d.npy'%i)
