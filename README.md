@@ -18,4 +18,4 @@ These code is used to reproduce the results post on paper RandomDepthwiseCNN.
 
 		python combine.py # combine all features which saved in those ten folders.
 
-		python rh_svc.py # Run LinearSVC on new features
+		python sgd_1m.py # Run MultiPerceptron on new features

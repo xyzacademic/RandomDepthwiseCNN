@@ -11,6 +11,6 @@ sh generate_features.sh
 
 python combine.py
 
-python rh_svc.py
+python sgd_1m.py
 
 
