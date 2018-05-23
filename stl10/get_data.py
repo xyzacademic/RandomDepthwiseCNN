@@ -26,7 +26,7 @@ trainset = torchvision.datasets.STL10(root='stl10', split='train', download=True
 train_loader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=10,
                                            pin_memory=True)
 
-testset = torchvision.datasets.STL10(root='stl10', split='test', download=True, transform=test_transform)
+testset = torchvision.datasets.STL10(root='stl10', split='test', download=True, transform=transform)
 test_loader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=10, pin_memory=True)
 
 
