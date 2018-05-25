@@ -58,7 +58,7 @@ config.gpu_options.allow_growth = True
 
 sess = tf.Session(config=config)
 
-x = tf.placeholder(tf.float32, shape=[None, 3, 96, 96])
+x = tf.placeholder(tf.float32, shape=[None, 3, 224, 224])
 
 n_features = 2500 # the number of features you want to generate
 batch_size = 2
