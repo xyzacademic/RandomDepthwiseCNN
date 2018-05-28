@@ -57,9 +57,13 @@ These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
     Please create two folders named as "train" and "val" in sub_imagenet directory. Then copy these ten folders from
     ILSVRC2012_img_train to train/ and from ILSVRC2012_img_val to val/ .
 
+	a. Enter folder "sub_imagenet"
+
+	b. Run "sh reproduce.sh"
+
 	Here is the simple description of reproduce.sh:
 
-		python get_data.py # download stl10's data and save them to current directory.
+		python get_data.py # save data to current directory.
 
 		sh gen.sh # create ten folders named as features1~features10 to store features.
 
@@ -68,3 +72,50 @@ These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
 		python combine.py # combine all features which saved in those ten folders.
 
 		python rh_svc.py # Run linearSVC on new features.
+
+    You will get about 78.4% accuracy on testing dataset in the end.
+
+
+4. How to reproduce the results of MNIST part.
+
+
+    a. Enter folder "mnist"
+
+	b. Run "sh reproduce.sh"
+
+
+	Here is the simple description of reproduce.sh:
+
+		python get_data.py # download MNIST's data and save them to current directory.
+
+		sh gen.sh # create ten folders named as features1~features10 to store features.
+
+		python gen_sh.py # generate shell scripts to run python scripts of generate features.
+
+		python combine.py # combine all features which saved in those ten folders.
+
+		python rh_svc.py # Run linearSVC on new features.
+
+    You will get about 99.4% accuracy on testing dataset in the end.
+
+
+5. How to reproduce the results of cifar100 part.
+
+
+    a. Enter folder "cifar100"
+
+	b. Run "sh reproduce.sh"
+
+	Here is the simple description of reproduce.sh:
+
+		python get_data.py # download cifar100's data and save them to current directory.
+
+		sh gen.sh # create ten folders named as features1~features10 to store features.
+
+		python gen_sh.py # generate shell scripts to run python scripts of generate features.
+
+		python combine.py # combine all features which saved in those ten folders.
+
+		python rh_svc.py # Run linearSVC on new features.
+
+    You will get about 52.9% accuracy on testing dataset in the end.
