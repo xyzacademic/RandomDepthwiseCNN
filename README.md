@@ -118,4 +118,4 @@ These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
 
 		python rh_svc.py # Run linearSVC on new features.
 
-    You will get about 52.9% accuracy on testing dataset in the end.
+    You will get about 53.29% accuracy on testing dataset in the end.
