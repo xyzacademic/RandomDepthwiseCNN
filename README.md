@@ -15,7 +15,9 @@ These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
 		sh gen.sh # create ten folders named as features1~features10 to store features.
 
 		python gen_sh.py # generate shell scripts to run python scripts of generate features.
-
+		
+		sh generate_features.sh # generate new features and save them into ten folders created previously.
+       
 		python combine.py # combine all features which saved in those ten folders.
 
 		python sgd_1m.py # Run MultiPerceptron on new features
@@ -37,6 +39,8 @@ These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
 		sh gen.sh # create ten folders named as features1~features10 to store features.
 
 		python gen_sh.py # generate shell scripts to run python scripts of generate features.
+		
+		sh generate_features.sh # generate new features and save them into ten folders created previously.
 
 		python combine.py # combine all features which saved in those ten folders.
 
@@ -68,6 +72,8 @@ These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
 		sh gen.sh # create ten folders named as features1~features10 to store features.
 
 		python gen_sh.py # generate shell scripts to run python scripts of generate features.
+		
+		sh generate_features.sh # generate new features and save them into ten folders created previously.
 
 		python combine.py # combine all features which saved in those ten folders.
 
@@ -77,7 +83,6 @@ These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
 
 
 4. How to reproduce the results of MNIST part.
-
 
     a. Enter folder "mnist"
 
@@ -91,6 +96,8 @@ These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
 		sh gen.sh # create ten folders named as features1~features10 to store features.
 
 		python gen_sh.py # generate shell scripts to run python scripts of generate features.
+		
+		sh generate_features.sh # generate new features and save them into ten folders created previously.
 
 		python combine.py # combine all features which saved in those ten folders.
 
@@ -113,6 +120,8 @@ These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
 		sh gen.sh # create ten folders named as features1~features10 to store features.
 
 		python gen_sh.py # generate shell scripts to run python scripts of generate features.
+		
+		sh generate_features.sh # generate new features and save them into ten folders created previously.
 
 		python combine.py # combine all features which saved in those ten folders.
 
