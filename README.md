@@ -1,28 +1,22 @@
 # RandomDepthwiseCNN
 
-These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
+These codes are used to reproduce the results post on paper 
+Image classification and retrieval with random depthwise signed convolutional neural networks.
+https://arxiv.org/abs/1806.05789
 
 1. How to reproduce the results of cifar10 part.
 
 	a. Enter folder "cifar10"
 	
-	b. Run "sh reproduce.sh"
+	b. Run "sh run_job.sh"
 
 	Here is the simple description of reproduce.sh:
-
-		python get_data.py # download cifar10's data and save them to current directory.
-
-		sh gen.sh # create ten folders named as features1~features10 to store features.
-
-		python gen_sh.py # generate shell scripts to run python scripts of generate features.
 		
-		sh generate_features.sh # generate new features and save them into ten folders created previously.
-       
-		python combine.py # combine all features which saved in those ten folders.
+        python stack_features.py # get 100k features based on Random Depthwise CNN.
+        
+        python svm.py  # run linearSVC on the new features which just got.
 
-		python sgd_1m.py # Run MultiPerceptron on new features
-
-	You will get about 78.39% accuracy on testing dataset in the end.
+	You will get about 76.36% accuracy on testing dataset in the end.
 
 
 
@@ -30,23 +24,15 @@ These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
 
 	a. Enter folder "stl10"
 
-	b. Run "sh reproduce.sh"
+	b. Run "sh run_job.sh"
 
 	Here is the simple description of reproduce.sh:
 
-		python get_data.py # download stl10's data and save them to current directory.
-
-		sh gen.sh # create ten folders named as features1~features10 to store features.
-
-		python gen_sh.py # generate shell scripts to run python scripts of generate features.
-		
-		sh generate_features.sh # generate new features and save them into ten folders created previously.
-
-		python combine.py # combine all features which saved in those ten folders.
-
-		python rh_svc.py # Run linearSVC on new features.
+        python stack_features.py # get 100k features based on Random Depthwise CNN.
+        
+        python svm.py  # run linearSVC on the new features which just got.
 	
-	You will get about 70.8% accuracy on testing dataset in the end.
+	You will get about 71.8% accuracy on testing dataset in the end.
 
 
 
@@ -63,68 +49,55 @@ These codes are used to reproduce the results post on paper RandomDepthwiseCNN.
 
 	a. Enter folder "sub_imagenet"
 
-	b. Run "sh reproduce.sh"
+	b. Run "sh run_job.sh"
 
 	Here is the simple description of reproduce.sh:
 
-		python get_data.py # save data to current directory.
+        python stack_features.py # get 100k features based on Random Depthwise CNN.
+        
+        python svm.py  # run linearSVC on the new features which just got.
 
-		sh gen.sh # create ten folders named as features1~features10 to store features.
-
-		python gen_sh.py # generate shell scripts to run python scripts of generate features.
-		
-		sh generate_features.sh # generate new features and save them into ten folders created previously.
-
-		python combine.py # combine all features which saved in those ten folders.
-
-		python rh_svc.py # Run linearSVC on new features.
-
-    You will get about 78.4% accuracy on testing dataset in the end.
+    You will get about 78.8% accuracy on testing dataset in the end.
 
 
 4. How to reproduce the results of MNIST part.
 
     a. Enter folder "mnist"
 
-	b. Run "sh reproduce.sh"
-
+	b. Run "sh run_job.sh"
 
 	Here is the simple description of reproduce.sh:
 
-		python get_data.py # download MNIST's data and save them to current directory.
-
-		sh gen.sh # create ten folders named as features1~features10 to store features.
-
-		python gen_sh.py # generate shell scripts to run python scripts of generate features.
-		
-		sh generate_features.sh # generate new features and save them into ten folders created previously.
-
-		python combine.py # combine all features which saved in those ten folders.
-
-		python rh_svc.py # Run linearSVC on new features.
+        python stack_features.py # get 100k features based on Random Depthwise CNN.
+        
+        python svm.py  # run linearSVC on the new features which just got.
 
     You will get about 99.4% accuracy on testing dataset in the end.
 
 
 5. How to reproduce the results of cifar100 part.
 
-
     a. Enter folder "cifar100"
 
-	b. Run "sh reproduce.sh"
+	b. Run "sh run_job.sh"
 
 	Here is the simple description of reproduce.sh:
 
-		python get_data.py # download cifar100's data and save them to current directory.
-
-		sh gen.sh # create ten folders named as features1~features10 to store features.
-
-		python gen_sh.py # generate shell scripts to run python scripts of generate features.
-		
-		sh generate_features.sh # generate new features and save them into ten folders created previously.
-
-		python combine.py # combine all features which saved in those ten folders.
-
-		python rh_svc.py # Run linearSVC on new features.
+        python stack_features.py # get 100k features based on Random Depthwise CNN.
+        
+        python svm.py  # run linearSVC on the new features which just got.
 
     You will get about 53.29% accuracy on testing dataset in the end.
+    
+6. How to reproduce the results of COREAL part.
+   
+   a. Enter folder "corel"
+   
+   b. Run "sh run_job.sh"
+   
+   Here is the simple description of reproduce.sh:
+   
+        python stack_features.py 
+       
+        python mlp.py
+   You will get features of last second layer of mlp.
